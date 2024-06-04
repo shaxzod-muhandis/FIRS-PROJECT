@@ -2,9 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 @import "./reset";
 
+html,
 body {
   font-family: "Alata", sans-serif;
   background: #fff;
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main {
+  flex: 1 1 auto;
 }
 .container {
   max-width: 1162px;
@@ -43,16 +53,16 @@ body {
         line-height: 167%;
         color: #fff;
       }
-      .nav-menu {
+    }
+    .nav-menu {
+      display: none;
+    }
+    @media (max-width: 760px) {
+      .nav-list_item {
         display: none;
       }
-      @media (max-width: 760px) {
-        .nav-list_item {
-          display: none;
-        }
-        .nav-menu {
-          display: block;
-        }
+      .nav-menu {
+        display: block;
       }
     }
   }
